@@ -15,7 +15,12 @@ include_directories(include)
 add_executable(topic_publisher src/topic_publisher.cpp)
 ament_target_dependencies(topic_publisher rclcpp std_msgs)
 
-install(TARGETS topic_publisher
+add_executable(topic_subscriber src/topic_subscriber.cpp)
+ament_target_dependencies(topic_subscriber rclcpp std_msgs)
+
+install(TARGETS
+  topic_publisher
+  topic_subscriber
   DESTINATION lib/${PROJECT_NAME}
 )
 

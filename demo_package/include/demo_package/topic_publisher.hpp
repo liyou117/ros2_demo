@@ -1,5 +1,5 @@
-#ifndef TOPIC_PUBLISHER__TOPIC_PUBLISHER_HPP_
-#define TOPIC_PUBLISHER__TOPIC_PUBLISHER_HPP_
+#ifndef DEMO_PACKAGE__TOPIC_PUBLISHER_HPP_
+#define DEMO_PACKAGE__TOPIC_PUBLISHER_HPP_
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
@@ -14,4 +14,4 @@ class TopicPublisher : public rclcpp::Node
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
 };
 
-#endif  // TOPIC_PUBLISHER__TOPIC_PUBLISHER_HPP_
+#endif  // DEMO_PACKAGE__TOPIC_PUBLISHER_HPP_
