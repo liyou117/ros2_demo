@@ -1,14 +1,16 @@
 #include "demo_package/topic_subscriber.hpp"
 
+#include <memory>
+
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
+#include "demo_interface/msg/num.hpp"
 
 TopicSubscriber::TopicSubscriber() : rclcpp::Node("topic_subscriber")
 {
-  subscriber_ = this->create_subscription<std_msgs::msg::String>(
-    "topic", 10,
-    [this](const std_msgs::msg::String::SharedPtr msg) {
-      RCLCPP_INFO(this->get_logger(), "subscribe: %s", msg->data.c_str());
+  subscriber_ = this->create_subscription<demo_interface::msg::Num>(
+    "demo_topic", 10,
+    [this](const demo_interface::msg::Num::SharedPtr msg) {
+      RCLCPP_INFO(this->get_logger(), "subscribe: %ld", msg->num);
     }
   );
 }

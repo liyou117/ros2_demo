@@ -2,7 +2,7 @@
 #define DEMO_PACKAGE__TOPIC_PUBLISHER_HPP_
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
+#include "demo_interface/msg/num.hpp"
 
 class TopicPublisher : public rclcpp::Node
 {
@@ -11,7 +11,7 @@ class TopicPublisher : public rclcpp::Node
     ~TopicPublisher() = default;
 
   private:
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    rclcpp::Publisher<demo_interface::msg::Num>::SharedPtr publisher_;
 };
 
 #endif  // DEMO_PACKAGE__TOPIC_PUBLISHER_HPP_
