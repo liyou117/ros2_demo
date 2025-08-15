@@ -5,7 +5,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "demo_interface/msg/num.hpp"
 
-TopicSubscriber::TopicSubscriber() : rclcpp::Node("topic_subscriber")
+TopicSubscriber::TopicSubscriber() : rclcpp::Node("topic_subscriber_node")
 {
   subscriber_ = this->create_subscription<demo_interface::msg::Num>(
     "demo_topic", 10,

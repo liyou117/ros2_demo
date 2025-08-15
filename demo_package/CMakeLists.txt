@@ -18,9 +18,17 @@ ament_target_dependencies(topic_publisher rclcpp demo_interface)
 add_executable(topic_subscriber src/topic_subscriber.cpp)
 ament_target_dependencies(topic_subscriber rclcpp demo_interface)
 
+add_executable(service_server src/service_server.cpp)
+ament_target_dependencies(service_server rclcpp demo_interface)
+
+add_executable(service_client src/service_client.cpp)
+ament_target_dependencies(service_client rclcpp demo_interface)
+
 install(TARGETS
   topic_publisher
   topic_subscriber
+  service_server
+  service_client
   DESTINATION lib/${PROJECT_NAME}
 )
 

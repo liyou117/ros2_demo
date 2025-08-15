@@ -4,6 +4,14 @@
 #include "rclcpp/rclcpp.hpp"
 #include "demo_interface/srv/add_two_ints.hpp"
 
+class ServiceServer : public rclcpp::Node
+{
+  public:
+    ServiceServer();
+    ~ServiceServer() = default;
 
+  private:
+    rclcpp::Service<demo_interface::srv::AddTwoInts>::SharedPtr server_;
+};
 
 #endif  // DEMO_PACKAGE__SERVICE_SERVER_HPP_

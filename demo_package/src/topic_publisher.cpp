@@ -6,7 +6,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "demo_interface/msg/num.hpp"
 
-TopicPublisher::TopicPublisher() : rclcpp::Node("topic_publisher")
+TopicPublisher::TopicPublisher() : rclcpp::Node("topic_publisher_node")
 {
   publisher_ = this->create_publisher<demo_interface::msg::Num>("demo_topic", 10);
   demo_interface::msg::Num message;
