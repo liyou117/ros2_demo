@@ -1,5 +1,5 @@
-#ifndef DEMO_PACKAGE__SERVICE_CLIENT_HPP_
-#define DEMO_PACKAGE__SERVICE_CLIENT_HPP_
+#ifndef DEMO_SERVICE__SERVICE_CLIENT_HPP_
+#define DEMO_SERVICE__SERVICE_CLIENT_HPP_
 
 #include "rclcpp/rclcpp.hpp"
 #include "demo_interface/srv/add_two_ints.hpp"
@@ -14,4 +14,4 @@ class ServiceClient : public rclcpp::Node
     std::shared_ptr<demo_interface::srv::AddTwoInts::Request> request_;
 };
 
-#endif  // DEMO_PACKAGE__SERVICE_CLIENT_HPP_
+#endif  // DEMO_SERVICE__SERVICE_CLIENT_HPP_
