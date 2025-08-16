@@ -8,9 +8,10 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-install(
-  DIRECTORY launch
-  DESTINATION share/${PROJECT_NAME}
+install(DIRECTORY
+  launch
+  param
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 if(BUILD_TESTING)
