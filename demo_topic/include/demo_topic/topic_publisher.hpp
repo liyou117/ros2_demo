@@ -12,6 +12,7 @@ class TopicPublisher : public rclcpp::Node
 
   private:
     rclcpp::Publisher<demo_interface::msg::Num>::SharedPtr publisher_;
+    rclcpp::TimerBase::SharedPtr timer_;
 };
 
 #endif  // DEMO_TOPIC__TOPIC_PUBLISHER_HPP_
