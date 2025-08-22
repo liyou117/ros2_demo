@@ -8,7 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-install(DIRECTORY launch urdf rviz gazebo
+install(DIRECTORY launch urdf config
   DESTINATION share/${PROJECT_NAME}
 )
 

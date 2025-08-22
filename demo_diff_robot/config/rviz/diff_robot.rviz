@@ -11,7 +11,6 @@ Panels:
         - /RobotModel1/Description Topic1
         - /TF1
         - /TF1/Frames1
-        - /TF1/Frames1/base_link1
         - /TF1/Tree1
       Splitter Ratio: 0.47089946269989014
     Tree Height: 719
@@ -82,6 +81,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        dummy_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         front_caster_wheel_link:
           Alpha: 1
           Show Axes: false
@@ -114,6 +117,8 @@ Visualization Manager:
           Value: false
         base_link:
           Value: true
+        dummy_link:
+          Value: false
         front_caster_wheel_link:
           Value: false
         left_wheel_link:
@@ -126,21 +131,22 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          back_caster_wheel_link:
-            {}
-          front_caster_wheel_link:
-            {}
-          left_wheel_link:
-            {}
-          right_wheel_link:
-            {}
+        dummy_link:
+          base_link:
+            back_caster_wheel_link:
+              {}
+            front_caster_wheel_link:
+              {}
+            left_wheel_link:
+              {}
+            right_wheel_link:
+              {}
       Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: dummy_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -183,7 +189,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.0842504501342773
+      Distance: 2.1655116081237793
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -198,10 +204,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.4097962379455566
+      Pitch: 0.42979738116264343
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.6635379791259766
+      Yaw: 3.668513298034668
     Saved: ~
 Window Geometry:
   Displays:

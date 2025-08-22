@@ -3,6 +3,7 @@
 
   <xacro:include filename="$(find demo_diff_robot)/urdf/material_common.xacro"/>
   <xacro:include filename="$(find demo_diff_robot)/urdf/inertial_common.xacro"/>
+  <xacro:include filename="$(find demo_diff_robot)/urdf/diff_robot_ros2_control.xacro"/>
   
   <xacro:macro name="diff_robot" params="prefix">
 
@@ -73,6 +74,10 @@
 
     <gazebo reference="${prefix}left_wheel_link">
       <material>Gazebo/Black</material>
+      <mu1 value="20.0"/>
+      <mu2 value="20.0"/>
+      <kp value="1000000000.0"/>
+      <kd value="1.0"/>
     </gazebo>
 
     <!-- left wheel joint -->
@@ -105,6 +110,10 @@
 
     <gazebo reference="${prefix}right_wheel_link">
       <material>Gazebo/Black</material>
+      <mu1 value="20.0"/>
+      <mu2 value="20.0"/>
+      <kp value="1000000000.0"/>
+      <kd value="1.0"/>
     </gazebo>
 
     <!-- right wheel joint -->
@@ -135,6 +144,13 @@
       <xacro:sphere_inertia m="${caster_wheel_mass}" r="${caster_wheel_radius}"/>
     </link>
 
+    <gazebo reference="${prefix}front_caster_wheel_link">
+      <mu1 value="0.0"/>
+      <mu2 value="0.0"/>
+      <kp value="1000000000.0"/>
+      <kd value="1.0"/>
+    </gazebo>
+
     <!-- front caster wheel joint -->
     <joint name="${prefix}front_caster_wheel_joint" type="fixed">
       <parent link="${prefix}base_link"/>
@@ -162,6 +178,13 @@
       <xacro:sphere_inertia m="${caster_wheel_mass}" r="${caster_wheel_radius}"/>
     </link>
 
+    <gazebo reference="${prefix}back_caster_wheel_link">
+      <mu1 value="0.0"/>
+      <mu2 value="0.0"/>
+      <kp value="1000000000.0"/>
+      <kd value="1.0"/>
+    </gazebo>
+
     <!-- back caster wheel joint -->
     <joint name="${prefix}back_caster_wheel_joint" type="fixed">
       <parent link="${prefix}base_link"/>
@@ -172,5 +195,6 @@
   </xacro:macro>
 
   <xacro:diff_robot prefix=""/>
+  <xacro:diff_robot_ros2_control/>
 
 </robot>

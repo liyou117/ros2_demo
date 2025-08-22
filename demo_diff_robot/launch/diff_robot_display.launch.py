@@ -4,7 +4,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
   urdf_path = get_package_share_directory('demo_diff_robot') + '/urdf/diff_robot.urdf.xacro'
-  rviz_path = get_package_share_directory('demo_diff_robot') + '/rviz/diff_robot.rviz'
+  rviz_path = get_package_share_directory('demo_diff_robot') + '/config/rviz/diff_robot.rviz'
   urdf_content = launch.substitutions.Command(['xacro ', urdf_path])
 
   robot_state_publisher_node = launch_ros.actions.Node(
