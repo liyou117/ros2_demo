@@ -21,13 +21,13 @@
     <xacro:property name="caster_wheel_mass" value="0.1"/>
     <xacro:property name="caster_wheel_radius" value="0.015"/>
 
-    <!-- dummy link -->
-    <link name="${prefix}dummy_link">
+    <!-- base footprint link -->
+    <link name="${prefix}base_footprint">
     </link>
 
-    <!-- dummy joint -->
-    <joint name="${prefix}dummy_joint" type="fixed">
-      <parent link="${prefix}dummy_link"/>
+    <!-- base footprint joint -->
+    <joint name="${prefix}base_footprint_joint" type="fixed">
+      <parent link="${prefix}base_footprint"/>
       <child link="${prefix}base_link"/>
       <origin xyz="0 0 ${base_height/2+wheel_radius}" rpy="0 0 0"/>
     </joint>

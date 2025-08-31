@@ -77,15 +77,15 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        dummy_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         front_caster_wheel_link:
           Alpha: 1
           Show Axes: false
@@ -96,12 +96,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        laser_link:
+        left_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        left_wheel_link:
+        lidar_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -126,17 +126,17 @@ Visualization Manager:
         All Enabled: false
         back_caster_wheel_link:
           Value: false
-        base_link:
+        base_footprint:
           Value: true
-        dummy_link:
+        base_link:
           Value: false
         front_caster_wheel_link:
           Value: false
         imu_link:
           Value: false
-        laser_link:
-          Value: false
         left_wheel_link:
+          Value: false
+        lidar_link:
           Value: false
         odom:
           Value: false
@@ -148,22 +148,21 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        dummy_link:
-          base_link:
-            back_caster_wheel_link:
-              {}
-            front_caster_wheel_link:
-              {}
-            imu_link:
-              {}
-            laser_link:
-              {}
-            left_wheel_link:
-              {}
-            right_wheel_link:
-              {}
         odom:
-          {}
+          base_footprint:
+            base_link:
+              back_caster_wheel_link:
+                {}
+              front_caster_wheel_link:
+                {}
+              imu_link:
+                {}
+              left_wheel_link:
+                {}
+              lidar_link:
+                {}
+              right_wheel_link:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -203,7 +202,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: dummy_link
+    Fixed Frame: base_footprint
     Frame Rate: 30
   Name: root
   Tools:
@@ -246,25 +245,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 7.893062591552734
+      Distance: 20.276853561401367
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.1173299551010132
-        Y: -1.02498197555542
-        Z: -0.0813782811164856
+        X: -0.5143864154815674
+        Y: -0.17072579264640808
+        Z: -1.3761404752731323
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.43979737162590027
+      Pitch: 0.6797971725463867
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.218540191650391
+      Yaw: 6.268537521362305
     Saved: ~
 Window Geometry:
   Displays:
