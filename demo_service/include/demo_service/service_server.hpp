@@ -6,12 +6,12 @@
 
 class ServiceServer : public rclcpp::Node
 {
-  public:
-    ServiceServer();
-    ~ServiceServer() = default;
+public:
+  ServiceServer();
+  ~ServiceServer() = default;
 
-  private:
-    rclcpp::Service<demo_interface::srv::AddTwoInts>::SharedPtr server_;
+private:
+  rclcpp::Service<demo_interface::srv::AddTwoInts>::SharedPtr server_;
 };
 
 #endif  // DEMO_SERVICE__SERVICE_SERVER_HPP_

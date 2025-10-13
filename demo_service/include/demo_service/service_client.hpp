@@ -6,12 +6,12 @@
 
 class ServiceClient : public rclcpp::Node
 {
-  public:
-    ServiceClient();
-    ~ServiceClient() = default;
+public:
+  ServiceClient();
+  ~ServiceClient() = default;
 
-    rclcpp::Client<demo_interface::srv::AddTwoInts>::SharedPtr client_;
-    std::shared_ptr<demo_interface::srv::AddTwoInts::Request> request_;
+  rclcpp::Client<demo_interface::srv::AddTwoInts>::SharedPtr client_;
+  std::shared_ptr<demo_interface::srv::AddTwoInts::Request> request_;
 };
 
 #endif  // DEMO_SERVICE__SERVICE_CLIENT_HPP_

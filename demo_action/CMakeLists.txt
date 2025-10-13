@@ -1,17 +1,22 @@
 cmake_minimum_required(VERSION 3.8)
-project(demo_interface)
+project(demo_action)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(demo_interface REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Num.msg"
-  "srv/AddTwoInts.srv"
-  "action/Count.action"
+include_directories(include)
+
+add_executable(action_server src/action_server.cpp)
+ament_target_dependencies(action_server rclcpp rclcpp_action demo_interface)
+
+install(TARGETS action_server
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)

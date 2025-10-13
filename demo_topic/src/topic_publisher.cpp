@@ -21,7 +21,7 @@ TopicPublisher::TopicPublisher() : rclcpp::Node("topic_publisher_node")
   );
 }
 
-int main(int argc, char **argv)
+int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<TopicPublisher>());

@@ -6,13 +6,13 @@
 
 class TopicPublisher : public rclcpp::Node
 {
-  public:
-    TopicPublisher();
-    ~TopicPublisher() = default;
+public:
+  TopicPublisher();
+  ~TopicPublisher() = default;
 
-  private:
-    rclcpp::Publisher<demo_interface::msg::Num>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
+private:
+  rclcpp::Publisher<demo_interface::msg::Num>::SharedPtr publisher_;
+  rclcpp::TimerBase::SharedPtr timer_;
 };
 
 #endif  // DEMO_TOPIC__TOPIC_PUBLISHER_HPP_

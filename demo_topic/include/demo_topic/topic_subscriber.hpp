@@ -6,12 +6,12 @@
 
 class TopicSubscriber : public rclcpp::Node
 {
-  public:
-    TopicSubscriber();
-    ~TopicSubscriber() = default;
+public:
+  TopicSubscriber();
+  ~TopicSubscriber() = default;
 
-  private:
-    rclcpp::Subscription<demo_interface::msg::Num>::SharedPtr subscriber_;
+private:
+  rclcpp::Subscription<demo_interface::msg::Num>::SharedPtr subscriber_;
 };
 
 #endif  // DEMO_TOPIC__TOPIC_SUBSCRIBER_HPP_

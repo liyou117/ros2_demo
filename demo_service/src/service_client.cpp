@@ -13,7 +13,7 @@ ServiceClient::ServiceClient() : rclcpp::Node("service_client_node")
   request_ = std::make_shared<demo_interface::srv::AddTwoInts::Request>();
 }
 
-int main(int argc, char **argv)
+int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
   
